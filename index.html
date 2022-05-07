@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Wordle</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function runGameOne() {
+                let answer = 'TAUPE';
+
+                let userGuess = prompt('enter a 5-letter word');
+                if (userGuess !== answer) {
+                    alert('try again');
+                } else if (userGuess === answer) {
+                    alert('you win!');
+                    return;
+                }
+
+                userGuess = prompt('enter a 5-letter word');
+                if (userGuess !== answer) {
+                    alert('you lose!');
+                } else if (userGuess === answer) {
+                    alert('you win!');
+                }
+            }
+            runGameOne();
+
+        </script>
+    </body>
+</html>

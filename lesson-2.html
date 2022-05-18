@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <h1>Wordle Lesson 2</h1>
+        <p>It's still all gonna happen through prompts/alerts!</p>
+
+    <script type="text/javascript">
+        let answer = 'TAUPE'; // 'taupe' !== 'TAUPE'
+        let guesses = 1;
+        let maxGuesses = 5;
+
+        let guessLimit = guesses + maxGuesses; // or... 6!
+        
+        while (guesses < guessLimit) {
+            let userGuess = prompt('enter a 5 letter word');
+
+            // begin validation logic
+            if (userGuess.length !== 5) {
+                alert('guess is not 5 characters, please fix');
+                continue; // skip the rest of the loop since we didn't get a valid guess
+            }
+
+            let lowerCasedGuess = userGuess.toUpperCase();
+            if (lowerCasedGuess === answer) {
+                alert('you won in ' + guesses + ' guesses!');
+                break;
+            } else {
+                guesses = guesses + 1;
+
+                if (guesses === guessLimit) {
+                    alert('you lost!');
+                } else {
+                    alert('you beefed it! you have ' + (guessLimit - guesses) + ' guesses remaining');
+                }
+            }
+        }
+    </script>
+    </body>
+</html>

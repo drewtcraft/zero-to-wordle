@@ -11,7 +11,7 @@ while (condition) {
     code to execute
 }
 ```
-- ininite loops
+- infinite loops
   - if the condition we give to the while loop is always true, we create an inifite loop
   - infinite loops freeze our programs, and caused Andrew's browser to crash last lesson
 ```javascript
@@ -27,8 +27,9 @@ while (x) {
 // this will alert 0, then 1, then 2, up to 9
 // this is also a good example of counting with a while loop!
 let y = 0;
-while (y < 10) {
+while (y < 10) { 
     alert(y);
+    y = y + 1;
 }
 ```
 
@@ -76,6 +77,15 @@ let uppercased = taupe.toUpperCase();
 alert(taupe === uppercased); // this alerts false
 alert(taupe !== uppercased); // this alerts true
 alert(taupe === uppercased.toLowerCase()); // this alerts true as well
+```
+
+- bonus: boolean data type
+  - we've talked about them a lot, but haven't seen them explicitly yet
+  - a boolean is either true or false
+  - they are especially useful with _conditionals_ -- the part that appears within the parenthesis with if- and while-loops
+```javascript
+let trueBool = true;
+let falseBool = false;
 ```
 
 ### Copy of last week's code
